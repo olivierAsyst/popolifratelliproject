@@ -1,0 +1,139 @@
+.user-details {
+    height: 130px;
+    gap: 10px;
+    padding: 20px 0;
+    border-bottom: 1px solid #c3c3c3;
+}
+
+.user-details .user-avatar {
+    height: 100%;
+}
+
+.user-details .user-avatar img {
+    height: 80%;
+}
+
+.user-details .user-text {
+    flex-direction: column;
+}
+
+.user-text ul {
+    padding-left: 0;
+}
+
+.user-text ul li p {
+    margin: 0;
+}
+
+.user-text ul li a {
+    padding: 5px;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 5px;
+}
+
+.user-text ul li a:hover {
+    background-color: var(--main-color-lourd);
+}
+
+
+/* DASHBOARD MENU */
+
+.dashboard {
+    text-align: center;
+}
+
+.dashboard>h1 {
+    font-family: 'Museo500', Arial;
+}
+
+.dashboard-menu {
+    gap: 10px;
+}
+
+.dashboard-menu {
+    margin: 20px 0;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dashboard-menu li {
+    background-color: var(--main-color);
+    margin-right: 50px;
+    color: white;
+    border-radius: 5px;
+}
+
+.dashboard-menu li:hover {
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+    cursor: pointer;
+    background-color: white;
+}
+
+.dashboard-menu li a {
+    padding: 10px;
+    width: 80%;
+}
+
+.dashboard-menu li a:hover {
+    color: var(--main-color);
+}
+
+.dashboard-menu li i {
+    padding-right: 5px;
+}
+
+.dashboard-menu li a {
+    font-size: 2rem;
+}
+
+.dashboard-menu li i {
+    font-size: 1.5rem;
+}
+
+
+/* GERER ARTICLES */
+
+.card-flex {
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.card-flex .event {
+    width: 350px;
+}
+
+nav.gerer {
+    padding: 5px;
+    justify-content: space-between;
+}
+
+nav.gerer a i {
+    color: var(--main-color-white);
+}
+
+h1.gerer-title {
+    margin: 10px 0;
+    font-family: 'Museo500';
+    font-size: 1.5rem;
+}
+
+nav.gerer a {
+    color: white;
+    background-color: var(--main-color);
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding: 5px 20px;
+}
+
+nav.gerer a i {
+    font-size: 1.5rem;
+}
+
+.card-createdAt {
+    color: #c3c3c3;
+}

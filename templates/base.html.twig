@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      {% block title %}
+        Bienvenue sur le portail en ligne PF - RDC
+      {% endblock %}
+    </title>
+    <link rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>" />
+    {% block stylesheets %}
+      {{ encore_entry_link_tags('app') }}
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+      <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css" integrity="sha512-6f7HT84a/AplPkpSRSKWqbseRTG4aRrhadjZezYQ0oVk/B+nm/US5KzQkyyOyh0Mn9cyDdChRdS9qaxJRHayww==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="/_assets/css/main.css" />
+    {% endblock %}
+  </head>
+  <body>
+    <header>
+      <div class="menu-entrance">
+        <h3>
+          Institut Supérieur des Technniques Médicales
+        </h3>
+        <ul>
+          <li class="nav-item"><a href="/">Acceuil</a></li>
+          <li class="nav-item down"><a href="">Filieres</a></li>
+          <li class="nav-item">
+            <a href="/actualites_evenements">Evenements</a>
+          </li>
+          <li class="nav-item">
+            <a href="/actualites_evenements">Actualités</a>
+          </li>
+          <li class="nav-item"><a href="/recherches">Recherches</a></li>
+          <li class="nav-item"><a href="/apropos">A propos</a></li>
+          <li class="nav-item"><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="menu-admin">
+      </div>
+      <div class="top-header flex">
+        <div class="contact-part flex gap-10 aic">
+            <div class="email-part flex">
+              <i class="fa-solid fa-envelope"></i>
+              <span>Email:</span>
+              <a href="mailto:info@popolifratelli-rdc.org">info@popolifratelli-rdc.org</a>
+            </div>
+            <div class="tige"></div>
+            <div class="phone-part flex">
+              <span>Organisation non gouvernementale</span>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+243993342947">+243 993 342 947</a>
+            </div>
+        </div>
+        <div class="menu">
+          <div class="item-menu flex">
+            <div class="icon-menu">
+              <i class="fa-solid fa-angles-down" id="down"></i>
+              <i class="fa-solid fa-angles-up" id="up"></i>
+            </div>
+            <a href="/" class="logo-title flex">
+              <h1>
+                POPOLI FRATELLI - RDC
+              </h1>
+            </a>
+          </div>
+        </div>
+        <div class="hours flex gap-10">
+          {% if app.user %}
+          <div class="start-hour flex">
+            <a href="{{ path('app_article_dashboard') }}"><i class="fa-solid fa-desktop" title="Administration"></i></a>
+          </div>
+          {% endif %}
+          <div class="start-hour flex">
+            <a target="_blank" href="https://webmail.nitrowebhost.co.uk/"><i class="fa-solid fa-inbox" title="WebMail"></i></a>
+          </div>
+          <div class="start-hour flex">
+            {% if app.user %}
+              <a href="/logout"><i class="fa-solid fa-lock-open" title="Deconnexion"></i></a>
+            {% else %}
+              <a href="/login"><i class="fa-solid fa-lock" title="Connexion"></i></a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      <div class="container-header">
+        <div class="middle-header flex jcsb">
+          <a href="/">
+            <img src="/_assets/images/logo/logo_popoli.png" alt="" />
+          </a>
+          <nav class="flex">
+            <ul class="nav-bar flex gap-15">
+              <li class="nav-item"><a href="/">Acceuil</a></li>
+              <li class="nav-item down">
+                <a href="/filieres">Nos activités</a>
+                <ul>
+                  <li class="nav-item"><a href="">Actualites</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="/actualites_evenements">Evenements</a>
+              </li>
+              <li class="nav-item">
+                <a href="/actualites_evenements">Actualités</a>
+              </li>
+              <li class="nav-item"><a href="/recherches">Réalisations</a></li>
+              <li class="nav-item"><a href="/apropos">A propos</a></li>
+              <li class="nav-item"><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="mh-bottom flex gap-20 aic">
+            <img src="/_assets/images/logo/icon-menu.png" alt="">
+            <div class="my-slide-button">
+              <a class="theme-btn" href="/donation">
+                <span class="mobile">
+                  <i class="fi fa fa-heart"></i>
+                </span>
+                <span class="text">Faire un don</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+      {% block slider %}
+
+      {% endblock %}
+    {% block events_news %}
+
+    {% endblock %}
+    {% block usersdetails %}
+    {% endblock %}
+    {% block body %}
+
+    {% endblock %}
+
+    {% block feedback %}
+
+    {% endblock %}
+
+    <footer>
+      <div class="all-footer-items">
+      <div class="container">
+          <div class="top-footer flex jcsb">
+            <img src="/_assets/images/logo/logo_popoli.png" alt="">
+            <ul class="sociaux-items flex gap-2">
+              <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+              <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+              <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+              <li><a href=""><i class="fa-brands fa-square-instagram"></i></a></li>
+            </ul>
+          </div>
+          <div class="middle-footer flex">
+            <div class="mf-items">
+              <h4>A propos de PF - RDC</h4>
+              <p>Organisation nationale, sans but lucratif oeuvrant dans le domainde humanitaire.</p>
+            </div>
+            <div class="mf-items">
+              <h4>Liens rapide</h4>
+              <ul>
+                <li><a href="">Acceuil</a></li>
+                <li><a href="">A propos de nous</a></li>
+                <li><a href="">Actualités</a></li>
+                <li><a href="">Evenements</a></li>
+              </ul>
+            </div>
+            <div class="mf-items">
+              <h4>Nos champs d'actions</h4>
+                <ul>
+                  <li><a href="">Acceuil</a></li>
+                  <li><a href="">A propos de nous</a></li>
+                  <li><a href="">Actualités</a></li>
+                  <li><a href="">Evenements</a></li>
+                </ul>
+            </div>
+            <div class="mf-items">
+              <h4>Nous Contacter</h4>
+              <p>Voici nos contact direct pour plus des précisions</p>
+              <ul>
+                <li class="flex gap-2"><i class="fa-solid fa-envelope"></i><a href="mailto:info@popolifratelli-rdc.org">info@popolifratelli-rdc.org</a></li>
+                <li class="flex gap-2"><i class="fa-solid fa-phone"></i><a href="tel:+243993342947">+243 993 342 947</a></li>
+                <li class="flex gap-2"><i class="fa-solid fa-location-pin"></i>N° 25, Av. Haut Congo, Uvira/RDC</li>
+              </ul>
+            </div>
+          </div>
+          <div class="bottom-footer flex jcsb">
+            <div class="footer-adresses">2024 PF - RDC. Tous droits réservés</div>
+            <div class="privacy-links">
+              <ul class="flex gap-5">
+                <li><a href="">Politique de confidentialité</a></li>
+                <li><a href="">A propos de nous</a></li>
+                <li><a href="">Contacts</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+        {#<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> #}
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+      <script src="/_assets/js/jquery-3.6.4.js"></script>
+      <script src="/_assets/js/readmore.min.js"></script>
+      <script src="/_assets/js/editor.js"></script>
+      <script src="/_assets/js/functions/listeners.js"></script>
+      <script src="/_assets/js/slider.js"></script>
+      <script src="/_assets/js/main.js"></script>
+    {% block javascripts %}
+     {{ encore_entry_script_tags('app') }}
+    {% endblock %}
+  </body>
+</html>

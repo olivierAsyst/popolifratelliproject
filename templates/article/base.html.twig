@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+  Administration - ISTM Uvira
+{% endblock %}
+{% block usersdetails %}
+
+<div class="container">
+  <div class="user-details flex">
+    <div class="user-avatar">
+      {% if app.user.profile.imageUrl is defined %}
+        <img src={{ app.user.profile.imageUrl }} alt="Image de: {{ app.user.fullName }}" />
+      {% else %}
+        <img src="/_assets/images/profiles/avatar.webp" alt="">
+      {% endif %}
+    </div>
+    {% if app.user %}
+    <div class="user-text">
+          <h3>{{ app.user.fullName }}</h3>
+          <ul>
+            <li><p>Vous avez publié {{ app.user.getArticles()|length }} article(s)</p></li>
+            <li>{% if app.user.telephone is not empty %}
+            <p><strong>Téléphone:</strong> {{ app.user.telephone }}</p>
+            {% endif %}</li>
+            <li>{% if app.user.telephone is not empty %}
+            <p><strong>Téléphone:</strong> {{ app.user.telephone }}</p>
+            {% endif %}
+            </li>
+            <li>{% if app.user.email is not empty %}
+            <p><strong>Adresse mail :</strong> {{ app.user.email }}</p>
+            {% endif %}
+            </li>
+            <li>{% if app.user.profile.description is defined %}
+            <p><strong>Petite description :</strong> {{ app.user.profile.description }}</p>
+            {% endif %}
+            </li>
+            <li><a href="{{ path('app_article_dashboard') }}">Administration</a></li>
+          </ul>
+    </div>
+  {% endif %}
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends '/istm_index/filieres/base_filieres.html.twig' %}
+
+{% block title %}
+  Nos activités - POPOLI FRATELLI - RDC
+{% endblock %}
+
+{% block body %}
+{% block filieres_right %}
+        <div class="filieres-right-text">
+          <h1>
+            Nos activités
+          </h1>
+          <p>
+          Dans le cadre de la réponse actuelle, PF-RDC travaille et conscientise la population à lutter contre la pauvreté, s’auto-prendre en charge
+        et bannir l'émigration clandestine. Pour y arriver, nous organisons un programme de formation multisectoriel.
+        Les bénéficiaires principales sont les femmes, les jeunes et les enfants socio économiquement vulnérables.
+        
+        Popoli Fratelli a une gamme d'expérience dans son programme d'encadrement des femmes et des filles en situation difficile.
+        Avec nos activités de routine, nous organisons des formations professionnelles pour
+        leur insertion socioéconomique. Chaque année plus de 400 femmes sont formées.
+        
+        Nous organisons aussi des sensibilisations, des accompagnements psychologiques et plaidoyers sur divers thèmes.
+        Les filles mères et les femmes chefs de ménage font la majorité de nos bénéficiaires.</p>
+          {# <h6>
+            Vous cherchez le meilleur programme d'études selon vos intérêts?
+          </h6> #}
+          <div class="filieres-right-items flex">
+            {% for f in filiere %}
+              <div class="card" style="width: 16rem;">
+                <img class="card-img-top"
+                  src={{ f.imageUrl }}
+                  alt="Card image cap" />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    {{ f.title }}
+                  </h5>
+                  <a href="/filieres/{{ f.slug }}" class="button">Explorer</a>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+  {% endblock %}
+{% endblock %}

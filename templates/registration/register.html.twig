@@ -1,0 +1,32 @@
+{% extends 'article/base.html.twig' %}
+
+{% block title %}
+  ISTM Uvira | Enregistrement
+{% endblock %}
+
+{% block body %}
+  <div class="registration-form">
+    <div class="container">
+      {{ form_errors(registrationForm) }}
+
+      {{ form_start(registrationForm) }}
+      <h1>
+        Enregistrement d'un utilisateur
+      </h1>
+      {{ form_row(registrationForm.fullName) }}
+      {{ form_row(registrationForm.email) }}
+      {{
+        form_row(
+          registrationForm.plainPassword,
+          {
+            label: 'Password'
+          }
+        )
+      }}
+      {# {{ form_row(registrationForm.agreeTerms) }} #}
+
+      <button type="submit" class="btn">Enregistrer</button>
+      {{ form_end(registrationForm) }}
+    </div>
+  </div>
+{% endblock %}

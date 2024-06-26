@@ -1,0 +1,14 @@
+{% extends 'article/base.html.twig' %}
+
+{% block title %}Nouvelle realisation{% endblock %}
+
+{% block body %}
+  <div class="registration-form">
+    <div class="container">
+    <h1>Ajout d'une realisation</h1>
+
+    {{ include('student_book/_form.html.twig') }}
+
+    <a class="btn btn-primary" href="{{ path('app_student_book_index') }}">Retour sur la liste</a>
+</div></div>
+{% endblock %}

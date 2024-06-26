@@ -1,0 +1,22 @@
+{% extends 'article/base.html.twig' %}
+{% block title %}
+  Nouveau Evement
+{% endblock %}
+
+{% block body %}
+  <div class="registration-form">
+    <div class="container">
+      {{ include('event/_form.html.twig', {title: "Creation d'un nouveau Evenement"})}}
+
+      <a href="{{ path('app_event_index') }}">Voir la liste des Evénéments</a>
+    </div>
+  </div>
+{% endblock %}
+{% block javascripts %}
+  {# <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+  <script>
+    ClassicEditor .create( document.querySelector( '#event_content' ) )
+    .then(editor => { console.log( editor ); } ) .catch( error => {
+    console.error( error ); } );
+  </script> #}
+{% endblock %}

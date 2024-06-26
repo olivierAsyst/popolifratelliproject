@@ -1,0 +1,38 @@
+{% extends '/istm_index/books/base_books.html.twig' %}
+
+{% block title %}
+  Notre Equipe - POPOLI FRATELLI - RDC
+{% endblock %}
+
+{% block body %}
+  <div class="container">
+    <div class="news-events-container">
+      <div class="last-news">
+        <h3>
+          Notre équipe
+        </h3>
+        <p>
+        Au sein de notre organisation humanitaire, nous avons la chance de compter sur une équipe exceptionnelle. 
+        Composée de professionnels passionnés, dévoués et empathiques, notre équipe travaille sans relâche pour améliorer 
+        la vie des plus vulnérables. Voici un aperçu de nos membres :
+        </p>
+        <div class="flex gap-2 wrap">
+          {% for member in members|slice(-10) %}
+          <div class="card" style="width: 22rem;">
+            <img src="{{ member.imageUrl }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ member.fullName }}</h5>
+              <p class="card-text">{{ member.fonction }}</p>
+              <p class="card-text">{{ member.description }}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">A Rejoint en {{ member.dateJoined | date("Y") }}</li>
+              {# <li class="list-group-item"><a href="{{ path('app_student_book_show', {'id': student_book.id}) }}"></a> Voir plus {{ book.year | date("Y") }}</li> #}
+            </ul>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

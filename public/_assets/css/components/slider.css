@@ -1,0 +1,152 @@
+.inslide-block {
+    background-color: var(--main-color-white);
+    height: 85vh;
+    padding-top: 50px;
+    padding-left: 100px;
+    padding-right: 50px;
+    gap: 10px;
+    /*transition-duration: 0ms;
+    opacity: 0;
+    transform: translate3d(-4749px, 0px, 0px); */
+}
+
+.my-slider {
+    flex: 4;
+    padding: 0 30px;
+    color: var(--main-color-lourd);
+}
+
+.my-slider .slider {
+    display: flex;
+    /* justify-content: start; */
+    /* align-items: center; */
+}
+
+.my-slider-details .my-slide-title {
+    color: var(--main-color-lourd);
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 35px;
+    padding-top: 10px 0;
+}
+
+.my-slider-details .my-slide-description {
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 70px;
+    padding: 20px 0;
+    color: #010038;
+}
+
+.my-slider-details p {
+    font-size: 1.3rem;
+}
+
+.my-slide-button .theme-btn {
+    background: var(--main-gradient);
+    margin: 20px 0;
+    display: inline-block;
+    padding: 15px 15px;
+    border: 0;
+    text-transform: capitalize;
+    -webkit-backface-visibility: hidden;
+    z-index: 1;
+    position: relative;
+    font-family: Nunito, sans-serif;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--main-color-white);
+}
+
+.my-slide-button .theme-btn:hover {
+    background: var(--main-gradient-ii);
+}
+
+.my-slide-button .theme-btn .mobile .fi {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    text-align: center;
+    color: var(--main-color-lourd);
+}
+
+.inslide-block .my-slider-img {
+    display: flex;
+    justify-content: start;
+    position: relative;
+    flex: 2;
+}
+
+.my-slider-img .image-two {
+    position: relative;
+    width: 650px;
+    height: 650px;
+    border-radius: 50%;
+    top: 10%;
+    right: 5%;
+}
+
+.my-slider-img .image-one {
+    position: relative;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    left: 15%;
+    padding: 20px;
+    background-color: var(--main-color-white);
+    z-index: 99;
+}
+
+.my-slider-img .benefits {
+    position: absolute;
+    text-align: center;
+    width: 250px;
+    height: 130px;
+    background-color: var(--main-color-white);
+    box-shadow: 0 1px 20px 0 rgba(43, 45, 118, .5);
+    color: var(--main-color-lourd);
+    /* border: 1px solid var(--main-color-white); */
+    padding: 10px;
+    border-radius: 20px;
+    top: 65%;
+    left: 20%;
+    z-index: 99;
+}
+
+.benefits>div {
+    display: flex;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+}
+
+.benefits>div i {
+    color: #010038;
+    font-size: 1.5rem;
+    padding: 10px;
+    border: 1px solid #010038;
+    border-radius: 50px;
+}
+
+.benefits>span {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.benefits>span h3 {
+    padding-top: 15px;
+    font-weight: 700;
+    font-size: 30px;
+    color: #010038;
+}
+
+.benefits p {
+    font-weight: bold;
+    color: #010038;
+    font-size: 1.2rem;
+}

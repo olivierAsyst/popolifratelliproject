@@ -1,0 +1,35 @@
+{% extends '/istm_index/books/base_books.html.twig' %}
+
+{% block title %}
+  Nos Réalisations - POPOLI FRATELLI - RDC
+{% endblock %}
+
+{% block body %}
+  <div class="container">
+    <div class="news-events-container">
+      <div class="last-news">
+        <h3>
+          Nos realisations
+        </h3>
+        <p>
+          PF - RDC, enregistrée officiellement en RD Congo, a accompli des progrès significatifs dans sa mission humanitaire. Découvrez comment nous avons impacté les communautés locales et répondu aux urgences avec efficacité.
+        </p>
+        <div class="flex gap-2 wrap">
+          {% for book in studentsBooks|slice(-10)|reverse %}
+          <div class="card" style="width: 22rem;">
+            <img src="{{ book.fileUrl }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ book.title }}</h5>
+              <p class="card-text">{{ book.studentFullName }}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Année {{ book.year | date("Y") }}</li>
+              {# <li class="list-group-item"><a href="{{ path('app_student_book_show', {'id': student_book.id}) }}"></a> Voir plus {{ book.year | date("Y") }}</li> #}
+            </ul>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

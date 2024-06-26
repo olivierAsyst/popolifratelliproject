@@ -1,0 +1,16 @@
+{{ form_start(form) }}
+    {# {{ form_widget(form) }} #}
+    {{ form_row(form.fullName)}}
+    {{ form_row(form.fonction)}}
+    {{ form_row(form.description, {'attr': {'required':false}})}}
+    {{ form_row(form.social_linkOne, {'attr': {'required':false}})}}
+    {{ form_row(form.social_linkTwo, {'attr': {'required':false}})}}
+    {{ form_row(form.social_linkThree, {'attr': {'required':false}})}}
+      {% if required is defined %}
+        {{ form_row(form.imageFile,{attr:{required: required}}) }}
+      {% else %}
+        {{ form_row(form.imageFile) }}
+      {% endif %}
+    {{ form_row(form.dateJoined, {'attr': {'required':false}})}}
+    <button class="btn">{{ button_label|default('Enregistrer') }}</button>
+{{ form_end(form) }}

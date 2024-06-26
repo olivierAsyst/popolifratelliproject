@@ -1,0 +1,32 @@
+{% extends '/istm_index/filieres/filieres_index.html.twig' %}
+
+{% block title %}
+  Réalisations - POPOLI FRATELLI - RDC {{ filiere.title }}
+{% endblock %}
+
+{% block body %}
+{% block filieres_left %}
+  <div class="filiere_img">
+    <img src="{{filiere.imageUrl}}" alt="" srcset="">
+  </div>
+{% endblock %}
+  {% block filieres_right %}
+    <div class="filieres-right">
+      <h5 class="card-title">
+        Secteur de {{ filiere.title }}
+      </h5>
+      <p class="card-text">
+        {% if filiere.description is not empty %}
+          {{ filiere.description|raw }}
+        {% else %}
+          <h6>
+            Aucune description pour le moment
+          </h6>
+        {% endif %}
+      </p>
+      <p class="card-text">
+        <small class="text-muted">Dernier mis a jour 3 mins</small>
+      </p>
+    </div>
+  {% endblock %}
+{% endblock %}

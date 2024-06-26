@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Filiere{% endblock %}
+
+{% block body %}
+    <h1>Editer le Filiere</h1>
+
+    {{ include('filiere/_form.html.twig', {'button_label': 'Mettre a jour'}) }}
+
+    <a class="btn" href="{{ path('app_filiere_index') }}">Retour a la liste</a>
+
+    {{ include('filiere/_delete_form.html.twig') }}
+{% endblock %}
+{% block javascripts %}
+  {# <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+  <script>
+    ClassicEditor .create( document.querySelector( '#filiere_description' ) )
+    .then(editor => { console.log( editor ); } ) .catch( error => {
+    console.error( error ); } );
+  </script> #}
+{% endblock %}

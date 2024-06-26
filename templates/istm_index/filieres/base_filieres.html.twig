@@ -1,0 +1,113 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  Réalisations - POPOLI FRATELLI - RDC
+{% endblock %}
+{% block events_news %}
+  <div class="header-events-news">
+    <div class="container">
+      <div class="events-news-title flex">
+        <h1>
+          <a href="/filieres">Nos activités</a>
+        </h1>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-events-news">
+    <div class="container">
+      <div class="events-news-menu">
+        <ul class="flex">
+          <li><a href=""><i class="fa-solid fa-house"></i></a></li>
+          <li>
+            <a href="/filieres" class="flex">
+              <i class="fa-solid fa-bullseye"></i>
+                Activités
+              </p>
+            </a>
+          </li>
+          <li>
+            <a href="/donation" class="flex">
+              <i class="fa-solid fa-door-open"></i>
+                Participer
+              </p>
+            </a>
+          </li>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="back">
+  </div>
+  <div class="all-filieres">
+    <div class="container flex">
+    {% block filieres_left %}
+          <div class="filieres-left">
+        <ul>
+          {% for f in filiere %}
+            <li><a href="/filieres/{{ f.slug }}">{{ f.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>  
+    {% endblock %}
+
+      {% block filieres_right %}
+      {% endblock %}
+      <div class="filieres-center">
+        <h1>
+          Contribuer
+        </h1>
+        <h3>
+          Vous vouslez aider?
+        </h3>
+        <p>
+          Cliquez sur le boutton ci-dessous pour participer à l'humanitariat en RDC
+        </p>
+                    <div class="my-slide-button">
+              <a class="theme-btn" href="">
+                <span class="mobile">
+                  <i class="fi fa fa-heart"></i>
+                </span>
+                <span class="text">Faire un don</span>
+              </a>
+            </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+{% block body %}
+
+{% endblock %}
+{% block feedback %}
+  <div class="news-feedback flex">
+    <div class="news-feedback-text flex">
+      <div class="feedback-text-left">
+        <h3>
+          Logistique
+        </h3>
+        <p>
+          Informations generales
+        </p>
+        <div>
+          <a class="ss" href="mailto:info@popolifratelli-rdc.org">
+            info@popolifratelli-rdc.org
+          </a>
+        </div>
+        <div>
+          <a class="ss" href="tel:+243999644524">+243 999 644 524</a>
+        </div>
+      </div>
+      <div class="feedback-text-rigth">
+        <p>
+          Relations medias
+        </p>
+        <div class="flex">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="news-feedback-img"></div>
+  </div>
+{% endblock %}

@@ -1,0 +1,19 @@
+.calendar-top-item{
+    flex-direction: column;
+    margin: 0 50px;
+    padding: 0 50px;
+}
+.calendar-top-item h1{
+    padding: 10px 0;
+}
+.calendar-top-item .calendar-top-item-detail>div{
+    padding: 5px 0;
+}
+.calendar-top-item .calendar-top-item-detail span{
+    font-weight: bold;
+}
+.calendar-top-item .calendar-top-item-text{
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    text-align: justify;
+}

@@ -1,0 +1,132 @@
+{% extends '/article/base.html.twig' %}
+
+{% block title %}
+  Article index
+{% endblock %}
+
+{% block body %}
+
+<nav class="gerer flex">
+  <h1 class="gerer-title">
+    Gestion des articles
+  </h1>
+  <a href="{{ path('app_article_new') }}" title="Ajouter Article"><i class="fa-solid fa-plus"></i></a>
+</nav>
+<div class="card-flex flex">
+{% for article in articles %}
+  <div class="card" style="width: 25rem;">
+    <img class="card-img-top" src="{{ article.imageUrl }}" alt="{{ article.title }}">
+    <div class="card-body">
+      <h5 class="card-title">{{ article.title }}</h5>
+      {# <nav>
+        <p class="card-text" id="card-text">{{ article.content|raw }}</p>
+      </nav> #}
+      {% if article.createdAt is not empty %}
+        <div class="card-createdAt">
+          <i>Ajouté le {{ article.createdAt|date('d/m/Y H:i:s') }}</i>
+        </div>
+      {% endif %}
+      {% if article.updatedAt is not empty  %}
+        <div class="card-createdAt">
+          <i>Mise à jour le </i> <strong> {{ article.updatedAt|date('d/m/Y H:i:s') }}</strong>
+        </div>
+      {% endif %}
+      <div class="gerer flex">
+        <a href="{{path('app_article_show',{ id: article.id }) }}" class="btn btn-primary">Voir details</a>
+        <a href="{{path('app_article_edit', {id: article.id}) }}" class="btn btn-danger">Modifier</a>
+      </div>
+  </div>
+</div>
+{% endfor %}
+</div>
+{# <div class="table-container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>
+          Id
+        </th>
+        <th>
+          Titre
+        </th>
+        <th>
+          Contenus
+        </th>
+        <th>
+          ImageUrl
+        </th>
+        <th>
+          CreatedAt
+        </th>
+        <th>
+          UpdatedAt
+        </th>
+        <th>
+          actions
+        </th>
+      </tr>
+    </thead>
+    <tbody class="articles-table">
+      {% for article in articles %}
+        <tr>
+          <td>
+            {{ article.id }}
+          </td>
+          <td>
+            {{ article.title }}
+          </td>
+          <td class="content">
+            {{ article.content|raw }}
+          </td>
+          <td class="table-image">
+            <div class="table-image-item">
+              <img src={{ article.imageUrl }} alt="" />
+            </div>
+          </td>
+          <td>
+            {{ article.createdAt ? article.createdAt|date('d/m/Y H:i:s') : '' }}
+          </td>
+          <td>
+            {{ article.updatedAt ? article.updatedAt|date('d/m/Y H:i:s') : '' }}
+          </td>
+          <td>
+            <a href="{{
+              path(
+                'app_article_show',
+                {
+                  id: article.id
+                }
+              )
+              }}">
+              show
+            </a>
+            <a href="{{
+              path(
+                'app_article_edit',
+                {
+                  id: article.id
+                }
+              )
+              }}">
+              edit
+            </a>
+          </td>
+        </tr>
+      {% else %}
+        <tr>
+          <td colspan="8">
+            Vous n'avez pas encore publier d'article <a href="{{ path('app_article_new') }}">Créez
+              en ici</a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div> #}
+{# <a href="{{ path('app_article_new') }}">Create new</a> #}
+{% endblock %}
+{% block javascripts %}
+  <script>
+    $('#card-text').readmore();
+  </script>
+{% endblock %}

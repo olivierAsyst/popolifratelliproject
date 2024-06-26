@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouveau filiere{% endblock %}
+
+{% block body %}
+  <div class="registration-form">
+    <div class="container">
+
+    {{ include('filiere/_form.html.twig', {title: "Creer un nouveau filiere"}) }}
+
+    <a href="{{ path('app_filiere_index') }}" class='btn'>Voir la liste</a>
+</div></div>
+{% endblock %}
+{% block javascripts %}
+  {# <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+  <script>
+    ClassicEditor .create( document.querySelector( '#filiere_description' ) )
+    .then(editor => { console.log( editor ); } ) .catch( error => {
+    console.error( error ); } );
+  </script> #}
+{% endblock %}

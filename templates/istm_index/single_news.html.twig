@@ -1,0 +1,44 @@
+{% extends '/istm_index/base_en.html.twig' %}
+
+{% block title %}
+  Actualités - ISTM Uvira {{ article.title }}
+{% endblock %}
+
+{% block body %}
+  <div class="container">
+    <div class="news-item flex">
+      <div class="left-items flex">
+        <p><i>Le {{ article.createdAt | date("d/m/Y") }}</i></p>
+        <div class="share-social">
+          <p>Partager sur</p>
+          <div class="social flex">
+            <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="www.twitter.com"><i class="fa-brands fa-square-twitter"></i></a>
+            <a href="www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="right-items">
+        <div class="top-single-item flex">
+          <div class="author-details flex">
+          {% if article.author.profile.picture is defined %}
+            <div class="author-image" style="background-image: url({{ article.author.profile.picture }})"></div>
+          {% else %}
+            <div class="author-image" style="background-image: url(/_assets/images/profiles/avatar.webp)"></div>
+          {% endif %}
+          <a href="">{{ article.author.fullName }}</a>
+        </div>
+        <div class="ligne"></div>
+        {{ article.fromNow }}
+        </div>
+        <div class="bottom-single-item flex">
+            <h3>{{ article.title }}</h3>
+          <div>          
+            <div class="news-image" style="background-image: url({{ article.imageUrl }})"></div>
+            <div class="news-texts">{{ article.content | raw }}</div>
+          </div>
+        </div>
+    </div>
+  </div>
+  </div>
+{% endblock %}

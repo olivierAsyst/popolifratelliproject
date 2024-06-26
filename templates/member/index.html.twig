@@ -1,0 +1,44 @@
+{% extends 'article/base.html.twig' %}
+
+{% block title %}Gestion des membres{% endblock %}
+{% block body %}
+<nav class="gerer flex">
+  <h1 class="gerer-title">
+    Gestion des membres
+  </h1>
+  <a href="{{ path('app_member_new') }}" title="Ajouter un membre"><i class="fa-solid fa-plus"></i></a>
+</nav>
+   <div class="flex gap-2 wrap">
+        {% for member in members %}
+        <div class="card" style="width: 18rem;">
+            {% if member.imageUrl is defined %}
+                <img src="{{ member.imageUrl }}" class="card-img-top" alt="...">
+            {% else %}
+                <img src="/_assets/images/profiles/avatar.webp" alt="">
+            {% endif %}
+            <div class="card-body">
+                <h5 class="card-title">{{ member.fullName }}</h5>
+                <p class="card-text">{{ member.description }}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Fonction: {{ member.fonction }}</li>
+                <li class="list-group-item">A rejoint: {{ member.dateJoined ? member.dateJoined|date('Y-m-d') : '' }}</li>
+            </ul>
+            <div class="card-body">
+                <a href="{{ member.socialLinkOne }}" target="_blank" class="card-link"><i class="fa-brands fa-facebook"></i></a>
+                <a href="{{ member.socialLinkTwo }}" target="_blank" class="card-link"><i class="fa-brands fa-twitter"></i></a>
+                <a href="{{ member.socialLinkThree }}" target="_blank" class="card-link"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <a class="btn" href="{{ path('app_member_show', {'id': member.id}) }}">Voir</a>
+            <a class="btn" href="{{ path('app_member_edit', {'id': member.id}) }}">Modifier</a>
+        </div>
+                    
+        {% else %}
+        <div class="card bg-danger">
+            <div class="card-body text-center">
+            <p class="card-text">Aucune enregistrement pour le moment</p>
+            </div>
+        </div>
+        {% endfor %}
+</div>
+{% endblock %}

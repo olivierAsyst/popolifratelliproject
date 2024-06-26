@@ -1,0 +1,284 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  POPOLI FRATELLI RDC - Accueil
+{% endblock %}
+{% block slider %}
+  <div class="inslide-block flex">
+    <div class="my-slider flex">
+      <div class="slider">
+        <div class="my-slider-details aic">
+          <div class="my-slide-title">BIENVENUE SUR LE PORTAIL DE PF - RDC</div>
+          <div class="my-slide-description">Créer un monde sans discrimination, où les gens vivent dans la fraternité.</div>
+          <p>Renforcement des moyens de subsistance pour les femmes et les jeunes victimes des conflits armés et autres formes de violences.</p>
+            <div class="my-slide-button">
+              <a class="theme-btn" href="/donation">
+                <span class="mobile">
+                  <i class="fi fa fa-heart"></i>
+                </span>
+                <span class="text">Faire un don</span>
+              </a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="my-slider-img">
+        <img src="/_assets/images/bg/coutur.jpeg" alt="" class="image-one">
+        <img src="/_assets/images/bg/bg.jpg" alt="" class="image-two">
+        <div class="benefits flex">
+          <div>
+            <i class="fa-solid fa-gift"></i>
+          </div>
+          <span>
+            <h3>1000+</h3>
+            <p>Bénéficiaires</p>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block body %}
+  <div class="programs">
+    <div class="container">
+      <div class="all-programs flex gap-10">
+        <div class="program-item">
+          <div class="icon flex aic jcc"><i class="fa-solid fa-bullseye"></i></div>
+          <div>
+            <h2 class="program-title">Mission</h2>
+            <p class="program-text">Créer des conditions favorables à la paix, la promotion des droits humains et des activités socio-économiques et culturelles, en mettant l'accent sur les droits de la femme.</p>
+          </div>
+        </div>
+        <div class="program-item">
+          <div class="icon flex aic jcc"><i class="fa-regular fa-eye"></i></div>
+          <div>
+            <h2 class="program-title">Vision</h2>
+            <p class="program-text">Créer un monde sans discrimination, où les gens vivent dans la fraternité.
+            </p>
+          </div>
+        </div>
+        <div class="program-item">
+          <div class="icon flex aic jcc"><i class="fa-solid fa-mountain"></i></div>
+          <div>
+            <h2 class="program-title">But</h2>
+            <p class="program-text">Initier des actions et soutenir les initiatives visant à promouvoir un développement harmonieux entre les gens.
+            </p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="istm-chiffres">
+    <div class="container">
+      <div class="all-istm-chiffre flex">
+        <div class="istm-chiffre-item">
+          <strong class="chiffre-item-title">3</strong>
+          <span class="chiffre-item-txt">Projets</span>
+        </div>
+        <div class="istm-chiffre-item">
+          <strong class="chiffre-item-title">8</strong>
+          <span class="chiffre-item-txt">Béneficiaires</span>
+        </div>
+        <div class="istm-chiffre-item">
+          <strong class="chiffre-item-title">+10 000</strong>
+          <span class="chiffre-item-txt">Sous bases</span>
+        </div>
+        <div class="istm-chiffre-item">
+          <strong class="chiffre-item-title">+50</strong>
+          <span class="chiffre-item-txt">Agents</span>
+        </div>
+        <div class="istm-chiffre-item">
+          <strong class="chiffre-item-title">+10</strong>
+          <span class="chiffre-item-txt">ans d'experience</span>
+        </div>
+      </div>
+      <div class="btn-donnee-chiffre">
+        <a href="" class="bouton-transparent-large">Découvrir POPOLI FRATELLI - RDC</a>
+      </div>
+    </div>
+  </div>
+    <div class="news-board">
+      <div class="container">
+        <h1>
+          Actualités
+        </h1>
+        <div class="all-news-item flex">
+          <div class="top-news flex">
+          {% for article in articles|slice(-3)|reverse %}
+          {# <div class="col col-lg-3 col-md-6 col-12 "> #}
+            <div class="top-news-item">
+            <div class="image">
+              <img src="{{ article.imageUrl }}" alt="" srcset="">
+              <div class="top-date">{{ article.fromNow }}
+                <div class="shape">
+                  <svg width="8" height="9" viewBox="0 0 8 9" fill="none"><path d="M7.99999 9.0001L-9.79769e-05 9.00023L8.00005 0.500149L7.99999 9.0001Z"></path></svg>
+                  <path d="M7.99999 9.0001L-9.79769e-05 9.00023L8.00005 0.500149L7.99999 9.0001Z"></path>
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <ul class="top-content flex">
+                <li>
+                  <div class="image-single">
+                      {% if article.author.profile.picture is defined %}
+                        <img src={{ article.author.profile.picture }} alt="">
+                      {% else %}
+                        <img src="/_assets/images/profiles/avatar.webp" alt="">
+                      {% endif %}
+                  </div>
+                  {{ article.author.fullName }}
+                </li>
+                <li><i class="fa-solid fa-comment"></i></li>
+              </ul>
+              <h4>
+                <a href="">{{ article.title }}</a>
+              </h4>
+              <div class="content-article">
+                <p>{{ article.content | raw }}</p>
+              </div>
+            </div>
+            <div class="blog-btn">
+              <a href="/actualites_evenements/nouvelle/{{ article.slug }}">
+              <span>Lire plus</span>
+              <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+            </div>
+            {# </div> #}
+          {% endfor %}
+        </div>
+      </div>
+        <div class="btn-donnee-actu">
+          <a href="/actualites_evenements" class="bouton-transparent-large">
+            Voir toutes les actualités
+          </a>
+        </div>
+    </div>
+  </div>
+  <div class="istm-calendar">
+    <h1>
+      Evénements
+    </h1>
+    <div class="container">
+      <div class="all-calendar-items flex">
+      {% for event in events|slice(-3)|reverse %}
+        <div class="calendar-item flex">
+          <div class="calendar-item-right flex">
+            <div class="day">
+              {{ event.startDate | date("d") }}
+            </div>
+            <div class="month">
+              {{ event.startDate | date("m") }}
+            </div>
+          </div>
+          <div class="calendar-item-left flex">
+            <div class="date-complet">
+              {{ event.startDate | date("d/m/Y") }}
+            </div>
+            <div class="heure-complet">
+              {{ event.endDate | date("d/m/Y") }}
+            </div>
+            <a href="/actualites_evenements/evenement/{{ event.slug }}" class="event-title">{{ event.title }}</a>
+          </div>
+        </div>
+      {% endfor %}
+      </div>
+    </div>
+    <div class="btn-donnee-chiffre">
+      <a href="/actualites_evenements/" class="bouton-transparent-large">Voir tous les événements</a>
+    </div>
+  </div>
+  <div class="container">
+  <div class="mission-vision">
+    <h1>Nos Vidéos</h1>
+    <p>Ici vous trouverez nos trois derniers videos publiés</p>
+    <div class="mission-vision-item flex">
+      <h5>Les videos seront bientôt disponible</h5>
+      <i class="fa-brands fa-youtube"></i>
+    </div>
+  </div>
+  </div>
+  <div class="istm-organigram">
+    <div class="container">
+      <div class="all-organigram-items flex">
+        <div class="organigram-description flex">
+          <nav class="organigram flex">
+            <h1 class="organigram-title">
+              NOTRE EQUIPE
+            </h1>
+            <p class="organigram-txt">
+              L'équipe de POPOLI FRATELLI est constituée des Agents sous statuts et sous contrats et est inclusive.
+              Popoli Fratelli-RDC est une organisation congolaise (RDC), a son bureaux à Uvira /RDC, du personnel local, de grands réseaux de bénévoles
+              et travaillent dans les zones cibles depuis plus de 12 ans, avec des liens solides à l'égard des communautés, le gouvernement et d'autres organisations.
+            </p>
+          </nav>
+          <div class="btn-donnee-chiffre">
+            <a href="" class="bouton-transparent-large">Découvrir plus</a>
+          </div>
+        </div>
+        <div class="authority-items flex gap-2">
+        {% for member in members|slice(-4) %}
+        <div class="organigram-item" style="background-image:url({{ member.imageUrl }})">
+          <div class="authority-description">
+            <h3 class="authority-name">
+              {{ member.fonction }}
+            </h3>
+            <h4 class="authority-post">
+              {{ member.fullName }}
+            </h4>
+            <div class="autority-social">
+              <a href="{{ member.socialLinkOne }}" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+              <a href="{{ member.socialLinkTwo }}" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+              <a href="{{ member.socialLinkThree }}" target="_blank"><i class="fa-brands fa-linkedin"></i></i></a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        <a href="" class="view-more flex">
+          <i class="fa-solid fa-angles-right fa-fade"></i>
+        </a>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="social-media">
+    <div class="container">
+      <div class="all-social-media flex">
+        <div class="social-media-text">
+          <h1>Nos partenaires</h1>
+        </div>
+        <div class="social-media-items flex jcsb">
+          <div title="https://monusco.unmissions.org" class="social-media-item" style="background-image: url(/_assets/images/partners/monusco.png);">
+            <a href="https://monusco.unmissions.org/" target="_blank"></a>
+          </div>
+          <div title="https://theret.org" class="social-media-item" style="background-image: url(/_assets/images/partners/ret.png);">
+            <a href="https://theret.org" target="_blank"></a>
+          </div>
+          <div title="https://www.miva.ch/fr/" class="social-media-item" style="background-image: url(/_assets/images/partners/miva.jpg);">
+            <a href="https://www.miva.ch/fr/" target="_blank"></a>
+          </div>
+          <div title="https://www.incontrofraipopoli.it/" class="social-media-item" style="background-image: url(/_assets/images/partners/inco_popoli.jpeg);">
+            <a href="https://www.incontrofraipopoli.it/" target="_blank"></a>
+          </div>
+          <div title="https://www.sciaf.org.uk/" class="social-media-item" style="background-image: url(/_assets/images/partners/sciaf_logo.jpg);">
+            <a href="https://www.sciaf.org.uk/" target="_blank"></a>
+          </div>
+          <div title="FHRDC" class="social-media-item" style="background-image: url(/_assets/images/partners/fhrdc.png);">
+            <a href="https://response.reliefweb.int/democratic-republic-congo/fonds-humanitaire-en-republique-democratique-du-congo" target="_blank">
+          </div>
+          <div title="https://www.gov.scot/" class="social-media-item" style="background-image: url(/_assets/images/partners/scot_gov.png);">
+            <a href="https://www.gov.scot/" target="_blank"></a>
+          </div>
+          <div title="https://www.wwfdrc.org/" class="social-media-item" style="background-image: url(/_assets/images/partners/wwf.png);">
+            <a href="https://www.wwfdrc.org/" target="_blank"></a>
+          </div>
+          <div title="https://www.unops.org/fr" class="social-media-item" style="background-image: url(/_assets/images/partners/unops.png);">
+            <a href="https://www.unops.org/fr" target="_blank"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

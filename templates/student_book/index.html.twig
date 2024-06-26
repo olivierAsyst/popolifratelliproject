@@ -1,0 +1,29 @@
+{% extends 'article/base.html.twig' %}
+
+{% block title %}Gestion des livres{% endblock %}
+
+{% block body %}
+
+<nav class="gerer flex">
+  <h1 class="gerer-title">
+    Gestion des Réalisations
+  </h1>
+  <a href="{{ path('app_student_book_new') }}" title="Ajouter un livre"><i class="fa-solid fa-plus"></i></a>
+</nav>
+<div class="card-flex flex gap-5">
+{% for student_book in student_books | reverse %}
+  <div class="card event">
+  <h5 class="card-header">{{ student_book.title }}</h5>
+  <div class="card-body">
+    <h5 class="card-title">Titre de realisation: {{ student_book.studentFullName }}</h5>
+    <p class="card-text">Année de realisation :  {{ student_book.year ? student_book.year|date('Y') : '' }}</p>
+    <div class="flex">          
+    <a class="btn btn-primary" href="{{ path('app_student_book_show', {'id': student_book.id}) }}">Voir plus</a>
+    <a class="btn btn-primary" href="{{ path('app_student_book_edit', {'id': student_book.id}) }}">Modifier</a>
+    </div>
+  </div>
+</div>
+{% endfor %}
+</div>
+
+{% endblock %}

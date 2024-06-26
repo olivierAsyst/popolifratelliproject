@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Livre de {{ student_book.studentFullName }}{% endblock %}
+
+{% block body %}
+<nav class="gerer flex">
+  <h1 class="gerer-title">
+    Livre de {{ student_book.studentFullName }}
+  </h1>
+  <div class="flex gap-10">
+    <a href="{{path('app_event_edit', { id: student_book.id }) }}" class="btn btn-primary">Modifier</a>
+    {{ include('student_book/_delete_form.html.twig') }}
+    <a href="{{ path('app_student_book_index') }}" class="btn btn-primary">Voir les livres</a>
+    <a href="{{ student_book.fileUrl }}" target="_blank" class="btn btn-primary"><i title="Visionner ou Télécharger le document" class="fa-solid fa-file-arrow-down"></i></a>
+  </div>
+</nav>
+<div class="card">
+  <div class="card-header"> <h5 style="margin-bottom:10px"> {{ student_book.title }}</h5>
+    <h5>Nom de l'auteur: {{ student_book.studentFullName }}</h5>
+    {% if student_book.year is not empty %}
+    <p class="card-text" style="margin-bottom:0">Année de publication: {{ student_book.year ? student_book.year|date('Y') : '' }}</p>
+    {% endif %}
+</div>
+  <div class="card-body">
+    <p class="card-text">{{ student_book.description }}</p>
+  </div>
+</div>
+<a href="{{ path('app_student_book_index') }}" class="btn btn-primary">Retour sur la liste</a>
+
+{% endblock %}

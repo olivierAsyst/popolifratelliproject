@@ -1,0 +1,24 @@
+{% extends '/istm_index/base_en.html.twig' %}
+
+{% block title %}
+  Actualités - ISTM Uvira
+{% endblock %}
+
+{% block body %}
+  <div class="container">
+    <div class="all-news-page">
+      <h1>
+        Nouvelles
+      </h1>
+      {% for article in articles | reverse %}
+        <div class="all-news-page-item flex">
+          <img src={{ article.imageUrl }} alt="{{ article.title }}" />
+          <div class="all-news-page-item-text flex gap-10">
+            <h6>{{ article.createdAt | date("d/m/Y")}}</h6>
+            <h4><a href="/actualites_evenements/nouvelle/{{ article.slug }}">{{ article.title }}</a></h4>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

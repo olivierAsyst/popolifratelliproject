@@ -1,0 +1,10 @@
+form>div.flex{
+    padding: 10px 0;
+}
+form .image-preview img{
+    width: 100px;
+}
+#event_startDate, #event_endDate{
+    width: 100%;
+    display: flex;
+}

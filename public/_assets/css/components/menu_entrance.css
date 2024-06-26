@@ -1,0 +1,36 @@
+.menu-entrance{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--main-color-lourd);
+    z-index: 999;
+    display: none;
+    padding: 10px;
+    transition: 1s;
+}
+#up{
+    display: none;
+}
+.menu-entrance h3{
+    color: white;
+    font-family: 'Museo500';
+    padding-bottom: 5px;
+    border-bottom: 3px solid #ffffff;
+}
+.menu-entrance ul{
+    padding-left: 0;
+}
+.menu-entrance ul li{
+    padding: 8px 0;
+    text-transform: uppercase;
+    font-family: 'Museo500';
+    color: white;
+    font-weight: bold;
+}
+.menu-entrance ul li:hover{
+    text-decoration: underline;
+}
+.menu-entrance ul li a:hover{
+    color: white;
+    text-decoration: underline;
+}

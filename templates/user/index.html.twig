@@ -1,0 +1,47 @@
+{% extends 'article/base.html.twig' %}
+
+{% block title %}User index{% endblock %}
+
+{% block body %}
+<nav class="gerer flex">
+  <h1 class="gerer-title">
+    Gestion des utilisateurs
+  </h1>
+  <a href="{{ path('app_register') }}" title="Ajouter un tilisateur"><i class="fa-solid fa-plus"></i></a>
+</nav>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom complet</th>
+                <th>Fonction</th>
+                <th>Telephone</th>
+                <th>Email</th>
+                <th>Roles</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.fullName }}</td>
+                <td>{{ user.fonction }}</td>
+                <td>{{ user.telephone }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
+                <td>
+                    <a style="text-decoration:underline; color:var(--main-color)" href="{{ path('app_user_show', {'id': user.id}) }}">Voir</a>
+                    <a style="text-decoration:underline; color:var(--main-color)" href="{{ path('app_user_edit', {'id': user.id}) }}">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">La liste est vide</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

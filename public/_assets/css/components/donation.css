@@ -1,0 +1,25 @@
+.donation-type {
+    flex-wrap: wrap;
+}
+
+.donation-type .dt-item {
+    background: #f5fdff;
+    width: 500px;
+    box-shadow: 0 2px 10px rgba(0, 4, 88, .1);
+    border-radius: 15px;
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.dt-item>i {
+    color: #010038;
+    font-size: 2rem;
+    padding: 10px;
+    border: 2px solid #010038;
+    border-radius: 5px;
+}
+
+.dt-item .dt-item-desc span {
+    font-weight: bold;
+}

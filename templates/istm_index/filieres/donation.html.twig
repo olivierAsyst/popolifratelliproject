@@ -1,0 +1,47 @@
+{% extends '/istm_index/filieres/base_filieres.html.twig' %}
+
+{% block title %}
+  Faire un don - PF - RDC
+{% endblock %}
+
+{% block body %}
+    {% block filieres_left %}
+          <div class="filieres-left">
+      </div>  
+    {% endblock %}
+{% block filieres_right %}
+        <div class="filieres-right-text">
+            <h1 style="padding-bottom:15px; ">{{ title }}</h1>
+            <h5 style="padding-bottom:15px; ">VOUS APPRECIEZ NOTRE TRAVAIL, SOUTENEZ NOUS</h5>
+            <p>
+            Soutenez nos projets humanitaires pour sauver des vies, protéger et éduquer. Grâce à la contribution financière 
+            de donateurs, PF RDC mène des programmes et projets de développement et travaille sans relâche pour mettre fin 
+            à la pauvreté. Vous pouvez aussi vous joindre à eux pour créer un monde dans lequel les gens vivent heureux et 
+            sans discrimination.
+            </p>
+            <div class="donation-type flex jcsb gap-5">
+                <div class="dt-item">
+                    <i class="fa-solid fa-building-columns"></i>
+                    <div class="dt-item-desc">
+                    <p>FBNBANK DRC SA</br>
+                    Agence de Uvira</br>
+                    11/1, Avenue Président Mobutu, Kimanga</br>
+                    Uvira, République Démocratique du Congo</br>
+                    Monnaie : USD</p>
+                    <span>
+                    <p>Swift : BICDCDK</br>
+                    Compte n° : 00014-22-100-2080014281267</p>
+                    </span>
+                    </div>
+                </div>
+                <div class="dt-item">
+                    <i class="fa-brands fa-paypal"></i>
+                    <div class="dt-item-desc">
+                        <p>paypal@popolifratelli.org</p>
+                        <div class="btn" style="background-color:#010038; ">Payez avec paypal</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  {% endblock %}
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit StudentBook{% endblock %}
+
+{% block body %}
+  <div class="registration-form">
+    <div class="container">
+    {# <h1>Modification des informations du livre</h1> #}
+
+    {{ include('student_book/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+
+    <a href="{{ path('app_student_book_index') }}">Voir la liste</a>
+
+    {{ include('student_book/_delete_form.html.twig') }}
+    </div></div>
+{% endblock %}

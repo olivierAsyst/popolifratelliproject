@@ -1,0 +1,55 @@
+{% extends '/istm_index/base_en.html.twig' %}
+{% block title %}
+  Admission - ISTM Uvira
+{% endblock %}
+{% block body %}
+  <div class="container">
+    <h3 class="title-apropos">
+      Admission
+    </h3>
+    <div class="all-admissions flex">
+      <div class="admission-text">
+        <h1>
+          Demande d'admission
+        </h1>
+        <h3>
+          Les Conditions d'admissions
+        </h3>
+        <p>
+          Tout nouveau Etudiant ou celui qui souhaite repréndre son parcours
+          universitaire et être admis à nos programmes doit impérativement
+          répondre aux critères ci-dessous:
+        </p>
+        <ol>
+          <li>Etre détenteur d'un diplôme d'Etat ou son équivalent agréé;</li>
+          <li>
+            Déposer des documents nécessaires exigés par le ministère de l'ESU
+            (liste disponible au secrétariat) ;
+          </li>
+          <li>
+            Payer les frais d'inscription s'élevant à 10$ pour la première année
+            de graduat;
+          </li>
+          <li>Etre de bonne morale.</li>
+        </ol>
+      </div>
+      <div class="admission-filiere">
+        <div class="admission-filiere-title">
+          <p>
+            Filières organisées au cours de l'année académique 2023-2024
+          </p>
+        </div>
+        <ul>
+          {% for filiere in filieres %}
+            <li>
+              <a href="filieres/{{ filiere.slug }}">{{ filiere.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+{% block events_news %}
+
+{% endblock %}

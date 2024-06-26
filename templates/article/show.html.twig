@@ -1,0 +1,91 @@
+{% extends '/article/base.html.twig' %}
+
+{% block title %}
+  Article
+{% endblock %}
+
+{% block body %}
+<nav class="gerer flex">
+  <h1 class="gerer-title">
+    Article
+  </h1>
+  <div class="flex gap-10">
+    <a href="{{path('app_article_edit', { id: article.id }) }}" class="btn btn-primary">Modifier</a>
+    {{ include('article/_delete_form.html.twig') }}
+    <a href="{{ path('app_article_index') }}" class="btn btn-primary">Voir les articles</a>
+  </div>
+</nav>
+<div class="card">
+  <h5 class="card-header">{{ article.title }}</h5>
+  <div class="card-body">
+    <p class="card-text">{{ article.content | raw }}</p>
+  </div>
+</div>
+<a href="{{ path('app_article_index') }}" class="btn btn-primary">Retour vers les articles</a>
+  {# <table class="table">
+    <tbody>
+      <tr>
+        <th>
+          Id
+        </th>
+        <td>
+          {{ article.id }}
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Title
+        </th>
+        <td>
+          {{ article.title }}
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Slug
+        </th>
+        <td>
+          {{ article.slug }}
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Content
+        </th>
+        <td>
+          {{ article.content|raw }}
+        </td>
+      </tr>
+      <tr>
+        <th>
+          ImageUrl
+        </th>
+        <td>
+          {{ article.imageUrl }}
+        </td>
+      </tr>
+      <tr>
+        <th>
+          CreatedAt
+        </th>
+        <td>
+          {{ article.createdAt ? article.createdAt|date('Y-m-d H:i:s') : '' }}
+        </td>
+      </tr>
+      <tr>
+        <th>
+          UpdatedAt
+        </th>
+        <td>
+          {{ article.updatedAt ? article.updatedAt|date('Y-m-d H:i:s') : '' }}
+        </td>
+      </tr>
+    </tbody>
+  </table> #}
+
+  {# <a href="{{ path('app_article_index') }}">back to list</a>
+
+  <a href="{{path('app_article_edit', { id: article.id }) }}">edit</a>
+
+  {{ include('article/_delete_form.html.twig') }} #}
+{% endblock %}

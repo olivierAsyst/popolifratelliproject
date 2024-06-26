@@ -1,0 +1,28 @@
+{% extends '/istm_index/base_en.html.twig' %}
+
+{% block title %}
+  Evenement - ISTM Uvira {{ event.title }}
+{% endblock %}
+
+{% block body %}
+  <div class="container">
+    <div class="calendar-top-item flex">
+      <h1>
+        {{ event.title }}
+      </h1>
+      <div class="calendar-top-item-detail">
+        <div>
+          <span>Date:&nbsp;&nbsp;</span> {{ event.startDate|date('d/m/Y') }}
+        </div>
+        {% if event.endDate is not empty %}
+          <div>
+            <span>Au:&nbsp;&nbsp;</span> {{ event.endDate|date('d/m/Y') }}
+          </div>
+        {% endif %}
+      </div>
+      <div class="calendar-top-item-text">
+        {{ event.content|raw }}
+      </div>
+    </div>
+  </div>
+{% endblock %}

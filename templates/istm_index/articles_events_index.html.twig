@@ -1,0 +1,62 @@
+{% extends '/istm_index/base_en.html.twig' %}
+
+{% block title %}
+  Actualités te Evénements - POPOILI FRATELLI - RDC
+{% endblock %}
+
+{% block body %}
+  <div class="container">
+    <div class="news-events-container">
+      <div class="last-news">
+        <h3>
+          Dernieres nouvelles
+        </h3>
+        <ul class="all-last-news flex">
+          {% for article in articles|slice(- 3)|reverse %}
+            <li class="last-news-item">
+              <img src={{ article.imageUrl }} alt="" />
+              <div class="last-news-text">
+                <div class="last-news-date">
+                  {{ article.fromNow }}
+                </div>
+                <a href="/actualites_evenements/nouvelle/{{ article.slug }}" class="last-news-title">
+                 {{ article.title }}
+                </a>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="last-events">
+        <h3>
+          Derniers Événements
+        </h3>
+        <div class="all-calendar-items flex">
+      {% for event in events|slice(-4)|reverse %}
+        <div class="calendar-item flex">
+          <div class="calendar-item-right flex">
+            <div class="day">
+              {{ event.startDate | date("d") }}
+            </div>
+            <div class="month">
+              {{ event.startDate | date("m") }}
+            </div>
+          </div>
+          <div class="calendar-item-left flex">
+            <div class="date-complet">
+              {{ event.startDate | date("d/m/Y") }}
+            </div>
+            {% if event.endDate is not empty %}
+            <div class="heure-complet">
+              {{ event.endDate | date("d/m/Y") }}
+            </div>
+            {% endif %}
+            <a href="/actualites_evenements/evenement/{{ event.slug }}" class="event-title">{{ event.title }}</a>
+          </div>
+        </div>
+      {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,71 @@
+.istm-calendar {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.istm-calendar h1 {
+    font-family: 'museo500';
+    color: var(--main-color-lourd);
+}
+
+.istm-calendar .all-calendar-items {
+    justify-content: space-around;
+    padding: 20px 0;
+    max-width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.calendar-item {
+    gap: 15px;
+    padding-right: 0.5rem !important;
+    padding-left: 0.5rem !important;
+    width: 350px;
+}
+
+.calendar-item .calendar-item-right {
+    flex-direction: column;
+}
+
+.calendar-item .calendar-item-right .day {
+    color: var(--main-color);
+    font-family: 'museo500', sans-serif;
+    font-size: 2rem;
+    line-height: 0.75;
+}
+
+.calendar-item .calendar-item-right .month {
+    font-size: 1rem;
+    color: #737373;
+    font-weight: bold;
+}
+
+.calendar-item .calendar-item-left {
+    flex-direction: column;
+    align-items: start;
+}
+
+.calendar-item .calendar-item-left .date-complet {
+    font-family: 'museo500';
+    color: #737373;
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+.calendar-item .calendar-item-left .heure-complet {
+    font-size: 0.975rem;
+    font-weight: bold;
+}
+
+.calendar-item .calendar-item-left .event-title {
+    color: var(--main-color);
+    font-family: 'museo500';
+    line-height: 1.5;
+    text-decoration: underline;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+.calendar-item .calendar-item-left .event-title:hover {
+    text-decoration: none;
+}

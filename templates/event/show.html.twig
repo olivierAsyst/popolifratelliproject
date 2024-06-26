@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Event{% endblock %}
+
+{% block body %}
+<nav class="gerer flex">
+  <h1 class="gerer-title">
+    Evenement
+  </h1>
+  <div class="flex gap-10">
+    <a href="{{path('app_event_edit', { id: event.id }) }}" class="btn btn-primary">Modifier</a>
+    {{ include('event/_delete_form.html.twig') }}
+    <a href="{{ path('app_event_index') }}" class="btn btn-primary">Voir les articles</a>
+  </div>
+</nav>
+<div class="card">
+  <div class="card-header"> <h5 style="margin-bottom:10px"> {{ event.title }}</h5>
+    {% if event.startDate is not empty %}
+      <p class="card-text" style="margin-bottom:0">Date debut: {{ event.startDate ? event.startDate|date('Y-m-d H:i:s') : '' }}</p>
+    {% endif %}
+    {% if event.endDate is not empty %}
+      <p class="card-text">Date fin:  {{ event.startDate ? event.startDate|date('Y-m-d H:i:s') : '' }}</p>
+    {% endif %}
+
+</div>
+  <div class="card-body">
+    <p class="card-text">{{ event.content | raw }}</p>
+  </div>
+</div>
+<a href="{{ path('app_event_index') }}" class="btn btn-primary">Retour vers les articles</a>
+
+{% endblock %}

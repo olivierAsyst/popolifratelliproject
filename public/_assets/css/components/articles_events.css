@@ -1,0 +1,163 @@
+.header-events-news {
+    background-color: var(--main-color-org);
+    height: 100px;
+}
+
+.header-events-news>.container {
+    height: 100%;
+}
+
+.header-events-news .events-news-title {
+    height: 100%;
+    align-items: center;
+}
+
+.header-events-news .events-news-title h1 {
+    font-family: 'Museo500';
+    color: #4a4a4a;
+}
+
+.header-events-news .events-news-title h1 a:first-child:hover,
+.header-events-news .events-news-title h1 a:nth-child(2):hover {
+    text-decoration: underline;
+    color: var(--main-color);
+}
+
+.events-news-menu {
+    height: 80px;
+}
+
+.bottom-events-news {
+    background-color: #4a4a4a;
+    height: 100%;
+}
+
+.bottom-events-news .events-news-menu ul {
+    padding-left: 0;
+    height: 100%;
+}
+
+.bottom-events-news .events-news-menu ul li:first-child {
+    color: var(--main-color);
+    width: 80px;
+    background-color: #3a3a3a;
+}
+
+.bottom-events-news .events-news-menu ul li {
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 100%;
+    border-right: 2px solid #3a3a3a;
+    cursor: pointer;
+}
+
+.bottom-events-news .events-news-menu ul li:hover {
+    background-color: #3a3a3a;
+}
+
+.bottom-events-news .events-news-menu ul li a:hover {
+    color: var(--main-color);
+}
+
+.news-events-container h3 {
+    font-family: 'Museo500';
+    padding: 20px 0;
+}
+
+ul.all-last-news {
+    width: 90%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+ul.all-last-news li.last-news-item {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+ul.all-last-news li.last-news-item img {
+    width: 100%;
+    height: 200px;
+}
+
+li.last-news-item .last-news-date {
+    color: #4a4a4a;
+    font-weight: bold;
+}
+
+li.last-news-item a.last-news-title {
+    color: var(--main-color);
+    font-family: 'Museo500';
+    font-size: 1.2rem;
+    text-decoration: underline;
+}
+
+li.last-news-item a.last-news-title:hover {
+    text-decoration: none;
+}
+
+.news-feedback {
+    height: 200px;
+    width: 100%;
+    margin: 10px 0;
+    margin: 0;
+    margin-top: 30px;
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+
+.news-feedback .news-feedback-text {
+    padding: 15px 0;
+    padding-left: 20px;
+    gap: 25px;
+    background-color: var(--main-color-org);
+    flex: 1;
+}
+
+.news-feedback .news-feedback-text h3 {
+    font-family: 'Museo500';
+    color: #4a4a4a;
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+}
+
+.news-feedback-text .feedback-text-left p,
+.news-feedback-text .feedback-text-rigth p {
+    font-weight: bold;
+    margin-bottom: 0.25em;
+}
+
+.news-feedback-text .feedback-text-rigth {
+    padding-top: 40px;
+}
+
+.ss {
+    color: var(--main-color);
+    text-decoration: underline;
+}
+
+.ss:hover {
+    color: var(--main-color);
+}
+
+.feedback-text-rigth>div {
+    justify-content: space-between;
+}
+
+.feedback-text-rigth a {
+    font-size: 1.5rem;
+}
+
+.news-feedback-img {
+    flex: 1;
+    background-image: url("/_assets/images/bg/4411.jpg");
+    background-repeat: no-repeat, repeat;
+    background-position: left;
+    background-size: cover;
+    filter: grayscale(50%);
+}

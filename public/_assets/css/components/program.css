@@ -1,0 +1,90 @@
+.all-programs {
+    margin: 30px 0;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.all-programs .program-item {
+    display: flex;
+    flex: 1;
+    background: #f5fdff;
+    box-shadow: 0 2px 10px rgba(0, 4, 88, .1);
+    border-radius: 15px;
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.program-item .icon {
+    flex: 1;
+    height: 110px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.program-item:first-child .icon {
+    background: linear-gradient(180deg, #1ecffe, #1287ff);
+}
+
+.program-item:nth-child(2) .icon {
+    background: linear-gradient(180deg, #ebb011, #ed861d 99.48%);
+}
+
+.program-item:nth-child(3) .icon {
+    background: linear-gradient(180deg, #00af90, #00715d 97.92%);
+}
+
+.program-item:first-child .icon {
+    background: linear-gradient(180deg, #1ecffe, #1287ff);
+}
+
+.program-item>div {
+    flex: 3;
+}
+
+.icon>i {
+    font-size: 50px;
+    color: #fff;
+}
+
+.program-item h2.program-title {
+    font-weight: bold;
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+    color: var(--main-color-lourd);
+}
+
+.program-item p.program-text {
+    text-align: justify;
+}
+
+.program-item a.button,
+.card-body a.button,
+.filieres-center a.button {
+    background-color: var(--main-color);
+    border-radius: 8px;
+    -webkit-box-shadow: 2px 3px 4px 0 rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 2px 3px 4px 0 rgba(0, 0, 0, 0.24);
+    box-shadow: 2px 3px 4px 0 rgba(0, 0, 0, 0.24);
+    color: #fff !important;
+    display: inline-block;
+    font-size: 0.9em;
+    font-weight: bold;
+    line-height: 1.25em;
+    margin-top: 0.75rem;
+    padding: 0.625em 2.153em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a.button sup {
+    text-transform: none;
+}
+
+.program-item a.button:hover,
+.card-body a.button:hover,
+.filieres-center a.button:hover {
+    background-color: var(--main-color-lourd);
+}

@@ -1,0 +1,13 @@
+{% extends 'article/base.html.twig' %}
+
+{% block title %}Nouveau Membre{% endblock %}
+
+{% block body %}
+  <div class="registration-form">
+    <div class="container">
+
+    {{ include('member/_form.html.twig', {title: "Creer un nouveau filiere"}) }}
+
+    <a href="{{ path('app_member_index') }}" class='btn'>Voir la liste</a>
+</div></div>
+{% endblock %}

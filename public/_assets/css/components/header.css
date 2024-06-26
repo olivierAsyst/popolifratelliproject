@@ -1,0 +1,257 @@
+header {
+    position: relative;
+    background-color: var(--main-color);
+    height: 160px;
+    width: 100%;
+}
+
+.container-header {
+    margin-right: auto;
+    margin-left: auto;
+    background-color: var(--main-color);
+}
+
+.start-hour {
+    justify-content: center;
+    align-items: center;
+}
+
+.start-hour a>i {
+    color: white;
+    font-size: 1.3rem;
+}
+
+.separate-menu {
+    display: flex;
+    border-left: 1px solid #4a4a4a;
+    height: 30px;
+}
+
+.tige {
+    display: flex;
+    border-left: 2px solid #616161;
+    height: 20px;
+    border-radius: 5px;
+}
+
+ul.nav-bar li ul {
+    display: none;
+}
+
+.top-header {
+    height: 47px;
+    background-color: var(--main-color-white);
+    justify-content: space-between;
+    margin: 0 1%;
+}
+
+.top-header .start-hour {
+    height: 100%;
+    width: 80px;
+    background-color: var(--main-color-lourd);
+}
+
+.top-header .contact-part {
+    padding-left: 2%;
+    font-size: 1.2rem;
+}
+
+.contact-part .email-part,
+.contact-part .phone-part {
+    gap: 4px;
+    align-items: center;
+}
+
+.email-part span,
+.phone-part span {
+    color: #616161;
+    font-weight: 600;
+}
+
+.email-part a {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.phone-part span {
+    padding-right: 5px;
+}
+
+.phone-part a {
+    font-weight: bold;
+    color: var(--main-color);
+    text-decoration: underline;
+}
+
+i.fa-solid {
+    color: var(--main-color);
+}
+
+.top-header .menu i {
+    color: white;
+}
+
+.top-header .menu {
+    display: none;
+}
+
+.top-header .menu h1 {
+    color: white;
+}
+
+.middle-header {
+    width: 100%;
+    /* flex-direction: column; */
+    padding: 10px 5%;
+    align-items: center;
+}
+
+.middle-header>a {
+    position: relative;
+    /* background-color: white; */
+    width: 250px;
+    /* bottom: 45px; */
+    /* padding-left: 5%; */
+}
+
+.middle-header a img {
+    width: 100%;
+}
+
+.middle-header .menus i {
+    font-size: 1.5rem;
+}
+
+header>a {
+    align-items: center;
+}
+
+header .menu {
+    display: none;
+}
+
+header .menu i {
+    font-size: 1.4rem;
+}
+
+header>a h2:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.top-header .menus:hover {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    cursor: pointer;
+    color: var(--main-color-lourd);
+}
+
+.mh-bottom>a {
+    background: var(--main-color);
+    color: var(--main-color-white);
+    border: 1px solid var(--main-color-white);
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: capitalize;
+    padding: 12px 32px;
+    /*z-index: 1;
+    transition: .5s */
+}
+
+.mh-bottom>img {
+    width: 30px;
+    height: 30px;
+}
+
+header nav {
+    justify-content: end;
+}
+
+header .nav-bar li a {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--main-color-white);
+    transition: 0.2s;
+}
+
+header .nav-bar li a:hover {
+    text-decoration: none;
+    border-bottom: 0.2rem solid;
+    color: var(--main-color-white);
+    font-weight: bolder;
+}
+
+.arrow-left {
+    display: flex;
+    background-color: var(--main-color);
+    width: 35px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow-left:hover {
+    cursor: pointer;
+}
+
+.arrow-left i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.menu .item-menu {
+    height: 100%;
+    align-items: center;
+    justify-content: left;
+}
+
+.item-menu .icon-menu {
+    display: flex;
+    height: 100%;
+    padding: 0 20px;
+    align-items: center;
+    background-color: #3a3a3a;
+    border-right: 1px solid #fff;
+}
+
+.item-menu .icon-menu:hover {
+    background-color: var(--main-color);
+    cursor: pointer;
+}
+
+.item-menu .logo-title {
+    height: 100%;
+    border-right: 1px solid #fff;
+    padding: 0 10px;
+    align-items: center;
+}
+
+.item-menu .logo-title h1 {
+    font-size: 1.8rem;
+    font-weight: bolder;
+}
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width:1027px) {
+    header {
+        height: 70px;
+    }
+    .top-header {
+        justify-content: space-between;
+    }
+    .middle-header>a {
+        display: none;
+    }
+    .top-header .menu {
+        display: block;
+    }
+    header nav .flex {
+        display: none;
+    }
+    header .menu {
+        display: block;
+    }
+}

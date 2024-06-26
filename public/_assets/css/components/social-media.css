@@ -1,0 +1,64 @@
+.social-media>.container {
+    overflow: hidden;
+}
+
+.all-social-media {
+    justify-content: center;
+    padding: 20px 0;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.all-social-media .social-media-text {
+    font-family: 'Museo500';
+    color: var(--main-color-lourd);
+    text-align: center;
+}
+
+@keyframes example {
+    0%,
+    100% {
+        left: 0;
+    }
+    50% {
+        left: 200px;
+    }
+}
+
+.all-social-media .social-media-items {
+    animation: example 5s infinite;
+}
+
+.all-social-media .social-media-items .social-media-item {
+    width: 150px;
+    height: 150px;
+    background-size: contain;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+}
+
+.all-social-media .social-media-items .social-media-item:hover {
+    cursor: pointer;
+    filter: none;
+}
+
+
+/* .social-media a>img {
+    width: 100%;
+} */
+
+*/ .all-social-media .social-media-items .social-media-item:hover {
+    color: var(--main-color-lourd) !important;
+    cursor: pointer;
+}
+
+@media screen and (max-width:700px) {
+    .all-social-media {
+        flex-direction: column;
+        text-align: center;
+    }
+    .all-social-media .social-media-items {
+        justify-content: space-evenly;
+    }
+}

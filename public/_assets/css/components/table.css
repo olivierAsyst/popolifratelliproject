@@ -1,0 +1,12 @@
+.table-container{
+    overflow-x: auto;
+}
+td.table-image .table-image-item {
+    width: 100px;
+}
+td.table-image .table-image-item img{
+    width: 100%;
+}
+table.table{
+    border-collapse: collapse;
+}

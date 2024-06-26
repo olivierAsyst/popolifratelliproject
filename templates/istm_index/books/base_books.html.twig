@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  Actualités - ISTM Uvira
+{% endblock %}
+{% block events_news %}
+  <div class="header-events-news">
+    <div class="container">
+      <div class="events-news-title flex">
+        <h1>
+          <a href="">Nos réalisations</a>
+        </h1>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-events-news">
+    <div class="container">
+      <div class="events-news-menu">
+        <ul class="flex">
+          <li><a href=""><i class="fa-solid fa-house"></i></a></li>
+          <li>
+            <a href="" class="flex">
+              <i class="fa-brands fa-creative-commons-nd"></i><p>
+                Réalisations
+              </p>
+            </a>
+          </li>
+          <li>
+            <a href="/membres" class="flex">
+              <i class="fa-brands fa-creative-commons-nd"></i><p>
+                Notre équipe
+              </p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+{% block body %}
+
+{% endblock %}
+{% block feedback %}
+  <div class="news-feedback flex">
+    <div class="news-feedback-text flex">
+      <div class="feedback-text-left">
+        <h3>
+          Bibliothèque
+        </h3>
+        <p>
+          Informations generales
+        </p>
+        <div>
+          <a class="ss" href="mailto:info@istmuvira.net">
+            bibliotheque@opolifratelli-rdc.org
+          </a>
+        </div>
+        <div>
+          <a class="ss" href="tel:+243993342947">+243 993 342 947</a>
+        </div>
+      </div>
+      <div class="feedback-text-rigth">
+        <p>
+          Rélations medias
+        </p>
+        <div class="flex">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="news-feedback-img"></div>
+  </div>
+{% endblock %}
