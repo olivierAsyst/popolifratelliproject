@@ -101,17 +101,13 @@ i.fa-solid {
 
 .middle-header {
     width: 100%;
-    /* flex-direction: column; */
     padding: 10px 5%;
     align-items: center;
 }
 
 .middle-header>a {
     position: relative;
-    /* background-color: white; */
     width: 250px;
-    /* bottom: 45px; */
-    /* padding-left: 5%; */
 }
 
 .middle-header a img {
@@ -230,10 +226,60 @@ header .nav-bar li a:hover {
 .item-menu .logo-title h1 {
     font-size: 1.8rem;
     font-weight: bolder;
+    color: var(--main-color-lourd);
 }
 
 
 /* RESPONSIVE */
+
+@media screen and (max-width:1646px) {
+    .middle-header>a {
+        width: 200px;
+    }
+    header .nav-bar li a {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width:1484px) {
+    .middle-header>a {
+        width: 160px;
+    }
+}
+
+@media screen and (max-width:1439px) {
+    header .nav-bar li a {
+        font-size: 1rem;
+    }
+    .middle-header>a {
+        width: 160px;
+    }
+}
+
+@media screen and (max-width:1295px) {
+    .my-slide-button .theme-btn {
+        margin: 15px 0;
+        padding: 12px 12px;
+        border-radius: 30px;
+        font-weight: 400;
+        font-size: 15px;
+    }
+    header .nav-bar li a {
+        font-size: 0.95rem;
+    }
+}
+
+@media screen and (max-width:1118px) {
+    .middle-header .nav-bar {
+        display: none;
+    }
+}
+
+@media screen and (max-width:1118px) {
+    .phone-part span {
+        display: none;
+    }
+}
 
 @media screen and (max-width:1027px) {
     header {
@@ -253,5 +299,8 @@ header .nav-bar li a:hover {
     }
     header .menu {
         display: block;
+    }
+    .top-header .contact-part {
+        display: none;
     }
 }

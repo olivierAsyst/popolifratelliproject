@@ -14,12 +14,11 @@
     flex: 4;
     padding: 0 30px;
     color: var(--main-color-lourd);
+    overflow: hidden;
 }
 
 .my-slider .slider {
     display: flex;
-    /* justify-content: start; */
-    /* align-items: center; */
 }
 
 .my-slider-details .my-slide-title {
@@ -149,4 +148,32 @@
     font-weight: bold;
     color: #010038;
     font-size: 1.2rem;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width:1259px) {
+    .my-slide-button .theme-btn {
+        margin: 15px 0;
+        padding: 10px 10px;
+        border-radius: 30px;
+        font-weight: bold;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:1227px) {
+    .my-slide-button .theme-btn .text {
+        display: none;
+    }
+    .my-slide-button .theme-btn .mobile .fi {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        background: #fff;
+        border-radius: 50%;
+        text-align: center;
+        color: var(--main-color-lourd);
+    }
 }
