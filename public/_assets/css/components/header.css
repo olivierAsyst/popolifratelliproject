@@ -265,13 +265,35 @@ header .nav-bar li a:hover {
         font-size: 15px;
     }
     header .nav-bar li a {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 1384px) {
+    header .nav-bar li a {
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (min-width: 1119px) and (max-width: 1202px) {
+    .middle-header>a {
+        width: 140px;
+    }
+}
+
+@media screen and (min-width: 1119px) and (max-width: 1151px) {
+    .top-header .contact-part {
+        padding: 2%;
+        font-size: 1rem;
     }
 }
 
 @media screen and (max-width:1118px) {
     .middle-header .nav-bar {
         display: none;
+    }
+    .middle-header>a {
+        width: 180px;
     }
 }
 
