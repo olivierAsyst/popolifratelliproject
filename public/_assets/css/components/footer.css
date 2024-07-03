@@ -1,7 +1,5 @@
 footer {
     width: 100%;
-    /* height: 50vh; */
-    /* background: #3a3a3a; */
     color: var(--main-color-white);
     height: auto;
     background: url(/_assets/images/bg/footerbg.jpg);
@@ -79,4 +77,10 @@ footer .all-footer-items {
 
 .privacy-links ul li {
     color: hsla(213, 7%, 75%, .97);
+}
+
+@media screen and (max-width:775px) {
+    .middle-footer{
+        flex-direction: column;
+    }
 }

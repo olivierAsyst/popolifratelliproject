@@ -1,7 +1,7 @@
 .all-programs {
     margin: 30px 0;
-    flex-wrap: wrap;
     max-width: 100%;
+    /* flex-wrap: wrap; */
 }
 
 .all-programs .program-item {
@@ -13,6 +13,7 @@
     padding: 15px;
     position: relative;
     overflow: hidden;
+    
 }
 
 .program-item .icon {
@@ -87,4 +88,10 @@ a.button sup {
 .card-body a.button:hover,
 .filieres-center a.button:hover {
     background-color: var(--main-color-lourd);
+}
+
+@media screen and (max-width: 900px) {
+    .all-programs{
+        flex-direction: column;
+    }
 }
