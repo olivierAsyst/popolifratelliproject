@@ -168,7 +168,13 @@
     }
 }
 
-@media screen and (max-width:1623px) {
+@media screen and (max-width:1629px) {
+    .inslide-block {
+        padding-top: 20px;
+    }
+    .inslide-block .my-slider-img {
+        max-width: 800px;
+    }
     .my-slider-img .image-two {
         position: relative;
         width: 600px;
@@ -181,87 +187,32 @@
         border-radius: 50%;
         z-index: 99;
     }
-    .inslide-block .my-slider-img {
-        /* justify-content: center; */
-        max-width: 800px;
-    }
 }
 
-@media screen and (max-width:1543px) {
+@media screen and (max-width:1270px) {
     .my-slider-details .my-slide-description {
-        font-weight: bold;
-        font-size: 40px;
-        line-height: 70px;
-        padding: 5px 0;
-        color: #010038;
-    }
-}
-
-
-/*
-@media screen and (max-width:1437px) {
-    .my-slider-details .my-slide-title {
-        font-size: 18px;
+        font-size: 35px;
+        line-height: 40px;
     }
     .inslide-block .my-slider-img {
-        max-width: 850px;
+        max-width: 650px;
+    }
+    .my-slider-img .image-two {
+        width: 500px;
+        height: 500px;
+    }
+    .my-slider-img .image-one {
+        width: 300px;
+        height: 300px;
+    }
+    .my-slider-img .benefits {
+        padding: 5px;
+        border-radius: 20px;
+        top: 45%;
+        left: 8%;
+        z-index: 99;
     }
 }
-
-@media screen and (max-width:1437px) {
-    .my-slider-details .my-slide-title {
-        font-size: 18px;
-    }
-    .inslide-block .my-slider-img {
-        max-width: 850px;
-    }
-}
-*/
-
-
-/*
-@media screen and (max-width:1484px) {
-    .middle-header>a {
-        width: 160px;
-    }
-}
-
-
-
-@media screen and (max-width:1439px) {
-    header .nav-bar li a {
-        font-size: 1rem;
-    }
-    .middle-header>a {
-        width: 160px;
-    }
-}
-
-@media screen and (max-width:1295px) {
-    .my-slide-button .theme-btn {
-        margin: 15px 0;
-        padding: 12px 12px;
-        border-radius: 30px;
-        font-weight: 400;
-        font-size: 15px;
-    }
-    header .nav-bar li a {
-        font-size: 0.95rem;
-    }
-}
-
-@media screen and (max-width:1118px) {
-    .middle-header .nav-bar {
-        display: none;
-    }
-}
-
-@media screen and (max-width:1118px) {
-    .phone-part span {
-        display: none;
-    }
-}
-*/
 
 @media screen and (max-width:1259px) {
     .my-slide-button .theme-btn {
@@ -274,7 +225,10 @@
 }
 
 @media screen and (max-width:1227px) {
-    .my-slide-button .theme-btn .text {
+    .inslide-block {
+        padding-top: 100px;
+    }
+    .mh-bottom .my-slide-button .theme-btn .text {
         display: none;
     }
     .my-slide-button .theme-btn .mobile .fi {
