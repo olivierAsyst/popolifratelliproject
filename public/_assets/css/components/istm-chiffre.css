@@ -5,6 +5,7 @@
     gap: 30px;
     justify-content: space-evenly;
     margin-bottom: 10px;
+    flex-wrap: wrap;
 }
 .istm-chiffres .istm-chiffre-item{
     text-align: center;

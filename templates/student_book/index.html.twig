@@ -18,8 +18,8 @@
     <h5 class="card-title">Titre de realisation: {{ student_book.studentFullName }}</h5>
     <p class="card-text">Année de realisation :  {{ student_book.year ? student_book.year|date('Y') : '' }}</p>
     <div class="flex">          
-    <a class="btn btn-primary" href="{{ path('app_student_book_show', {'id': student_book.id}) }}">Voir plus</a>
-    <a class="btn btn-primary" href="{{ path('app_student_book_edit', {'id': student_book.id}) }}">Modifier</a>
+      <a class="btn btn-primary" href="{{ path('app_student_book_show', {'id': student_book.id}) }}">Voir plus</a>
+      <a class="btn btn-primary" href="{{ path('app_student_book_edit', {'id': student_book.id}) }}">Modifier</a>
     </div>
   </div>
 </div>
